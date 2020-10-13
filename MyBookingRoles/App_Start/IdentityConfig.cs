@@ -21,6 +21,7 @@ namespace MyBookingRoles
     {
         public Task SendAsync(IdentityMessage message)
         {
+
             // Plug in your email service here to send an email.
             return Task.FromResult(0);
             //return Task.Factory.StartNew(() =>
@@ -60,11 +61,32 @@ namespace MyBookingRoles
         //    smtpClient.Send(msg);
         //}
     }
+    //public static class Keys
+    //{
+    //    public static string SMSAccountIdentification = "My Idenfitication";
+    //    public static string SMSAccountPassword = "My Password";
+    //    public static string SMSAccountFrom = "+15555551234";
+    //}
 
     public class SmsService : IIdentityMessageService
     {
+
         public Task SendAsync(IdentityMessage message)
         {
+            // Twilio Begin
+            // var Twilio = new TwilioRestClient(
+            //   Keys.SMSAccountIdentification,
+            //   Keys.SMSAccountPassword);
+            // var result = Twilio.SendMessage(
+            //   Keys.SMSAccountFrom,
+            //   message.Destination, message.Body
+            // );
+
+            // Status is one of Queued, Sending, Sent, Failed or null if the number is not valid
+
+            // Trace.TraceInformation(result.Status);
+
+            // Twilio doesn't currently have an async API, so return success.
             // Plug in your SMS service here to send a text message.
             return Task.FromResult(0);
         }
