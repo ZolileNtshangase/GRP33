@@ -10,40 +10,45 @@
 <div class="row" style="background-color: silver;">
     <h4>Order Name : <u>@Html.DisplayFor(model => model.OrderName)</u></h4>
 
-    <ul class="dl-horizontal form-inline list-unstyled">
-        <li>
-            Order Date : @Html.DisplayFor(model => model.OrderDate)
-        </li>
-        <li>
-            Payment Type : @Html.DisplayFor(model => model.PaymentType)
-        </li>
-        <li>
-            Payment Amount : @Html.DisplayFor(model => model.PaymentAmount)
-        </li>
-        <br />
-        <li>
-            Status : 
-            <b>
-                @Html.DisplayFor(model => model.Status)
-                @*@Html.DropDownListFor(model => model.CountryId, (IEnumerable<SelectListItem>)ViewBag.Countries, new { @class = "form-control" })*@
+    <div class="col-md-6">
+        <ul class="dl-horizontal form-inline list-unstyled">
+            <li>
+                Order Date : @Html.DisplayFor(model => model.OrderDate)
+            </li>
+            <li>
+                Payment Type : @Html.DisplayFor(model => model.PaymentType)
+            </li>
+            <li>
+                Payment Amount : @Html.DisplayFor(model => model.PaymentAmount)
+            </li>
+            <br />
+            <li>
+                Status :
+                <b>
+                    @Html.DisplayFor(model => model.Status)
+                    @*@Html.DropDownListFor(model => model.CountryId, (IEnumerable<SelectListItem>)ViewBag.Countries, new { @class = "form-control" })*@
 
-            </b>
-        </li>
-        <br />
-        <li><h4><u>Customer Information</u></h4></li>
-        <li>
-            Customer Name : @Html.DisplayFor(model => model.CustomerName)
-        </li>
-        <li>
-            CustomerPhone : @Html.DisplayFor(model => model.CustomerPhone)
-        </li>
-        <li>
-            CustomerEmail : @Html.DisplayFor(model => model.CustomerEmail)
-        </li>
-        <li>
-            CustomerAddress : @Html.DisplayFor(model => model.CustomerAddress)
-        </li>
-    </ul>
+                </b>
+            </li>
+            <br />
+            <li><h4><u>Customer Information</u></h4></li>
+            <li>
+                Customer Name : @Html.DisplayFor(model => model.CustomerName)
+            </li>
+            <li>
+                CustomerPhone : @Html.DisplayFor(model => model.CustomerPhone)
+            </li>
+            <li>
+                CustomerEmail : @Html.DisplayFor(model => model.CustomerEmail)
+            </li>
+            <li>
+                CustomerAddress : @Html.DisplayFor(model => model.CustomerAddress)
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <img width="100px" height="100px" alt="BarCode" style="background-color:white;"/>
+    </div>
 </div>
 <hr />
 <div class="row">
@@ -59,7 +64,7 @@
         @foreach (var item in Model.OrderDetails)
         {
             <tr>
-                <td>@item.ProdId</td>
+                <td>@item.ProdId.ToString()</td>
                 <td>@item.Quantity -items</td>
                 <td>R @item.Price</td>
             </tr>
@@ -88,4 +93,14 @@
             @Html.ActionLink("Cancel Order", "#", "Orders", new { id = Model.OrderId }, new { @class = "btn btn-danger" })
         </p>
     }
+</p>
+<hr />
+<p>
+    <h2>To Do List</h2>
+    <ul>
+        <li>Delete Order & Order Details</li>
+        <li>Approve order & Changing Order Status</li>
+        <li>Have notification for each process.</li>
+        <li>Have notification for status changes</li>
+    </ul>
 </p>

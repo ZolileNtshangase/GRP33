@@ -12,13 +12,6 @@ namespace MyBookingRoles.Controllers.Delivery
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        [Authorize(Roles = "SuperAdmin")]
-        // GET: DeliverySystem
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         public ActionResult DeliverySystemDashBoard()
         {
             return View();

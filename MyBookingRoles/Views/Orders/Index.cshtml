@@ -11,10 +11,10 @@
             <h4>Order List</h4>
         </div>
         <div class="col-md-2 ">
-            @Html.TextBox("searchWord",null, new { @class = "form-control" })
+            @Html.TextBox("searchWord", null, new { @class = "form-control" })
         </div>
         <div class="col-md-2">
-            <input type="submit" value="Sort Order" class="btn btn-success" />
+            <input type="submit" value="Order Status Sort" class="btn btn-success" />
         </div>
     </div>
 }
@@ -22,7 +22,7 @@
 <div style="text-align:center;">
     @Html.ActionLink("Approved Orders", "Index", "Orders", new { searchWord = "Approved" }, new { @class = "btn  btn-success" }) |
     @Html.ActionLink("Cancelled Orders", "Index", "Orders", new { searchWord = "Cancelled" }, new { @class = "btn  btn-danger" }) |
-    @Html.ActionLink("Refresh","Index", "Orders",null, new { @class = "btn  btn-primary" })
+    @Html.ActionLink("Refresh", "Index", "Orders", null, new { @class = "btn  btn-primary" })
 </div>
 <br />
 
@@ -46,8 +46,8 @@
     {
         <tr style="text-align:center;">
             <td>
-                    @Html.DisplayFor(modelItem => item.OrderName)
-                </td>
+                @Html.DisplayFor(modelItem => item.OrderName)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OrderDate)
             </td>
@@ -55,8 +55,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
-   
-            <td >
+
+            <td>
                 @Html.ActionLink("Order Details", "Details", new { id = item.OrderId }, new { @class = "btn btn-primary" })
             </td>
         </tr>
@@ -64,6 +64,4 @@
 
 </table>
 
-
-@Html.ActionLink("Back To SuperAdmin", "Index", "SuperAdmin", null, new { @class = "btn btn-primary" })
-
+@Html.ActionLink("Return To SuperAdmin", "Index", "SuperAdmin", null, new { @class = "btn btn-primary" })

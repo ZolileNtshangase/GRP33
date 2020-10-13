@@ -115,6 +115,13 @@ namespace MyBookingRoles.Controllers
             return View(myArtisys);
         }
 
+        public ActionResult DeliverySystemIndex()
+        {
+            var myArtisys = context.Users.Where(b => b.Name == "Delivery").ToList();
+            return View(myArtisys);
+        }
+
+
         private void AddErrors(IdentityResult result)
         {
             foreach (var error in result.Errors)

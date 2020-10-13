@@ -2884,3 +2884,5 @@ C:\Users\koolj\Documents\GitHub\GRP33\MyBookingRoles\obj\Debug\MyBookingRoles.cs
 C:\Users\koolj\Documents\GitHub\GRP33\MyBookingRoles\obj\Debug\MyBookingRoles.csproj.CopyComplete
 C:\Users\koolj\Documents\GitHub\GRP33\MyBookingRoles\obj\Debug\MyBookingRoles.dll
 C:\Users\koolj\Documents\GitHub\GRP33\MyBookingRoles\obj\Debug\MyBookingRoles.pdb
+C:\Users\koolj\Documents\GitHub\GRP33\MyBookingRoles\obj\Debug\MyBookingRoles.Migrations._null.resources
+C:\Users\koolj\Documents\GitHub\GRP33\MyBookingRoles\obj\Debug\MyBookingRoles.Migrations.SomeChanges.resources

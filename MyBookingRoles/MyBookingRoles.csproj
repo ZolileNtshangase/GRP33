@@ -218,6 +218,14 @@
     <Compile Include="Migrations\202010072152403_dontknow.Designer.cs">
       <DependentUpon>202010072152403_dontknow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010132052168_null.cs" />
+    <Compile Include="Migrations\202010132052168_null.Designer.cs">
+      <DependentUpon>202010132052168_null.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010132146055_Some Changes.cs" />
+    <Compile Include="Migrations\202010132146055_Some Changes.Designer.cs">
+      <DependentUpon>202010132146055_Some Changes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -337,6 +345,7 @@
     <Content Include="Views\Store\BrandCatalogue.cshtml" />
     <Content Include="Views\Store\CategoryCatalogue.cshtml" />
     <Content Include="Views\Store\ProductDetails.cshtml" />
+    <Content Include="Views\SuperAdmin\DeliverySystemIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -377,6 +386,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010072152403_dontknow.resx">
       <DependentUpon>202010072152403_dontknow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010132052168_null.resx">
+      <DependentUpon>202010132052168_null.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010132146055_Some Changes.resx">
+      <DependentUpon>202010132146055_Some Changes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

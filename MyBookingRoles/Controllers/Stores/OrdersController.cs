@@ -55,6 +55,8 @@ namespace MyBookingRoles.Controllers.Stores
             //var orderD = db.OrderDetails.Where(o => o.OrderId == id);
             var ord = db.Orders.Find(id);
             
+
+
             if(ord == null)
             {
                 return HttpNotFound();
