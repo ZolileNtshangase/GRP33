@@ -39,7 +39,7 @@ namespace MyBookingRoles.Models.Store
 
         //public double SupplierPrice { get; set; }
 
-        [Display(Name = "Quantity")]
+        [Display(Name = "In Store Quantity")]
         public int InStoreQuantity { get; set; }
 
         [Display(Name = "Visibility")]
